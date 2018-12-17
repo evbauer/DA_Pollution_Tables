@@ -1,4 +1,6 @@
 
+[![DOI](https://zenodo.org/badge/162072477.svg)](https://zenodo.org/badge/latestdoi/162072477)
+
 This repository provides tables of diffusion timescales for polluted white dwarfs.
 It also provides tables of surface Ca mass fractions as a function of accretion rate for MESA models accreting bulk earth composition including thermohaline mixing.
 
