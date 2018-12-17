@@ -6,8 +6,29 @@ from scipy import interpolate
 import InterpDiffusion
 import InterpThermohaline
 
-plt.style.use('mesa')
-#plt.rcParams.update({'font.serif':'Times New Roman'})
+plt.rcParams.update({'font.serif':'Times New Roman',
+                     'lines.markersize':4,
+                     'lines.linewidth':1.5,
+                     'text.usetex':True,
+                     'font.size':10,
+                     'font.family':'serif',
+                     'axes.titlesize':'medium',
+                     'axes.labelsize':'medium',
+                     'legend.fontsize':8,
+                     'legend.frameon':False,
+                     'figure.dpi':300,
+                     'xtick.minor.visible':True,
+                     'ytick.minor.visible':True,
+                     'savefig.bbox':'tight',
+                     'savefig.pad_inches':0.1,
+                     'savefig.dpi':300,
+                     'savefig.format':'pdf',
+                     'xtick.direction':'in',
+                     'xtick.top':True,
+                     'ytick.direction':'in',
+                     'ytick.right':True,
+                     'axes.formatter.use_mathtext':True,
+                     'figure.autolayout':True})
 
 
 # Get the data from the table of Koester & Wilken (2006)
