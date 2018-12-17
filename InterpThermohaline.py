@@ -66,7 +66,7 @@ for entry in Teffs:
     loggs09.append(logg09)
 
 
-# Get logg as a function of Teff for each mass
+# Make function for logg as a function of Teff for each mass
 g038 = interpolate.interp1d(actual_Teffs038,loggs038,fill_value='extrapolate')
 g06 = interpolate.interp1d(actual_Teffs06,loggs06,fill_value='extrapolate')
 g09 = interpolate.interp1d(actual_Teffs09,loggs09,fill_value='extrapolate')
