@@ -14,7 +14,7 @@ The files `InterpDiffusion.py` and `InterpThermohaline.py` give examples of inte
 	InterpDiffusion.log_mdot(XCa,Teff,logg)
 	InterpThermohaline.log_mdot(XCa,Teff,logg)
 	
-This will print accretion rates in g/s. The first will assume no thermohaline mixing occurs. The second accounts for thermohaline mixing.
+This will print accretion rates in g/s. The first will assume no thermohaline mixing occurs. The second accounts for thermohaline mixing. In both cases, bulk earth composition is assumed.
 
 The file `plot.py` gives an example of using these interpolation routines to plot accretion rates based on the data from Koester & Wilken (2006, https://www.aanda.org/articles/aa/abs/2006/27/aa4843-06/aa4843-06.html) and Farihi et al. (2012, https://academic.oup.com/mnras/article/424/1/464/1009557).
 
