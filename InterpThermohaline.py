@@ -98,7 +98,8 @@ def log_mdot09(log_XCa,Teff):
     return f(Teff)
 
 
-def log_mdot(log_XCa,Teff,logg):
+def log_mdot(XCa,Teff,logg):
+    log_XCa = np.log10(XCa)
     # Interpolate the other three functions in logg at this Teff
     f = interpolate.interp1d([g038(Teff), g06(Teff), g09(Teff)],
                              [log_mdot038(log_XCa,Teff), log_mdot06(log_XCa,Teff), log_mdot09(log_XCa,Teff)],

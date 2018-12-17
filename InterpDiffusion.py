@@ -50,9 +50,9 @@ def mdot06(XCa,Teff):
 def mdot09(XCa,Teff):
     return (XCa*Mcvz85(Teff)/tau85(Teff))/Earth_MassFrac_McD['Ca']
 
-def accretion_rate(XCa,Teff,logg):
-    mdot = interpolate.interp1d([logg75(Teff), logg80(Teff), logg85(Teff)],
-                                [mdot038(XCa,Teff), mdot06(XCa,Teff), mdot09(XCa,Teff)],
-                                fill_value='extrapolate')
-    return mdot(logg)
+def log_mdot(XCa,Teff,logg):
+    lgmdot = interpolate.interp1d([logg75(Teff), logg80(Teff), logg85(Teff)],
+                                  [np.log10(mdot038(XCa,Teff)), np.log10(mdot06(XCa,Teff)), np.log10(mdot09(XCa,Teff))],
+                                  fill_value='extrapolate')
+    return lgmdot(logg)
 
