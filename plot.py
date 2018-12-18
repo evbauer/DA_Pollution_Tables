@@ -90,7 +90,7 @@ ax2 = ax.twiny()
 ax2.set_xlim(ax.get_xlim())
 ax2.set_xticks(tickTeffs)
 ax2.set_xticklabels(tickNames)
-ax2.set_xlabel('Cooling Time [yr]')
+ax2.set_xlabel(r'Estimated Cooling Time [yr] (for $0.6 \, M_\odot$ WD)',fontsize='small')
 ax2.minorticks_off()
 
 plt.savefig('Mdot.pdf')
