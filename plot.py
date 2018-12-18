@@ -41,13 +41,10 @@ logCa = d[:,3]
 
 XCa = 40.078*(10**logCa)
 
-mdot = []
-mdot_th = []
-for i in range(len(Teff)):
-    # Use the diffusion interpolator to infer accretion rates
-    mdot.append(10**InterpDiffusion.log_mdot(XCa[i],Teff[i],logg[i]))
-    # Use the thermohaline interpolator to infer accretion rates
-    mdot_th.append(10**InterpThermohaline.log_mdot(XCa[i],Teff[i],logg[i]))
+# Use the diffusion interpolator to infer accretion rates
+mdot = 10**InterpDiffusion.log_mdots(XCa,Teff,logg)
+# Use the thermohaline interpolator to infer accretion rates
+mdot_th = 10**InterpThermohaline.log_mdots(XCa,Teff,logg)
 
 
 # Load DB Accretion rates from Farihi et al. (2012)

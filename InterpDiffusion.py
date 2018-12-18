@@ -56,3 +56,8 @@ def log_mdot(XCa,Teff,logg):
                                   fill_value='extrapolate')
     return lgmdot(logg)
 
+def log_mdots(XCa,Teff,logg):
+    logmdot = []
+    for i in range(len(Teff)):
+        logmdot.append(log_mdot(XCa[i],Teff[i],logg[i]))
+    return np.array(logmdot)
