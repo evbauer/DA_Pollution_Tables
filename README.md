@@ -30,6 +30,7 @@ You can also use the `log_mdots` functions for lists or arrays to return a numpy
 	InterpDiffusion.log_mdots(XCa,Teff,logg)
 	InterpThermohaline.log_mdots(XCa,Teff,logg)
 
+If you wish to make use of these tables in your work, please cite this paper (and read it too!): http://adsabs.harvard.edu/abs/2018arXiv181209602B
+
 
 The file `plot.py` gives an example of using these interpolation routines to plot accretion rates based on the data from Koester & Wilken (2006, https://www.aanda.org/articles/aa/abs/2006/27/aa4843-06/aa4843-06.html) and Farihi et al. (2012, https://academic.oup.com/mnras/article/424/1/464/1009557).
-
