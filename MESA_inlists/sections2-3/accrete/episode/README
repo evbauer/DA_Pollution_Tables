@@ -1,0 +1,10 @@
+
+Use MESA version 10398.
+
+These inlists will reproduce figure 3. Run inlist_accrete until it
+reaches its stopping condition. Then switch to inlist_stop_accrete and
+restart from the last photo.
+
+To instead reproduce figure 2, simply edit inlist_accrete so that the
+species shown there are each accreting with mass fraction 0.1.
+

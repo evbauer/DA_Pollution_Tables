@@ -1,0 +1,10 @@
+
+Use MESA version 10398.
+Also requires the ruby tool MesaScript, available at https://github.com/wmwolf/MesaScript
+
+This script produces many WD mods along a cooling sequence so that
+a specified Teff can easily be loaded in for accreting models.
+
+To run it, simply make a default MESA work directory, copy in the
+appropriate starting model (e.g. ../DA_0.6.mod) and then execute "ruby coolDA.rb"
+

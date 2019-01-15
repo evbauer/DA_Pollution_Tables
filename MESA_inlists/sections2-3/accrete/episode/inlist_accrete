@@ -1,0 +1,104 @@
+
+&star_job
+  pgstar_flag = .true.
+
+  load_saved_model = .true.
+  saved_model_name = 'DA_8000K.mod'
+
+  set_initial_age = .true.
+  initial_age = 0
+  set_initial_model_number = .true.
+  initial_model_number = 0
+  set_initial_dt = .true.
+  years_for_initial_dt = 1d-05
+
+  set_to_this_tau_factor = 0.1
+  set_tau_factor = .true.
+
+  change_net = .true.
+  new_net_name = 'pollution3.net'
+
+/ ! end of star_job namelist
+
+&controls
+  photo_interval = 100
+
+  history_interval = 1
+
+  profile_interval = 1000
+
+  surface_avg_abundance_dq = 1d-12
+
+  max_age = 20000
+
+  mixing_length_alpha = 0.8
+
+  MLT_option = 'ML2'
+
+  T_mix_limit = 20000
+
+  which_atm_option = 'WD_tau_25_tables'
+
+  mass_change = 1.586d-18
+
+  accrete_same_as_surface = .false.
+  accrete_given_mass_fractions = .true.
+  num_accretion_species = 10
+  accretion_species_id(1) = 'fe56'
+  accretion_species_id(2) = 'o16'
+  accretion_species_id(3) = 'si28'
+  accretion_species_id(4) = 'mg24'
+  accretion_species_id(5) = 'ni58'
+  accretion_species_id(6) = 'ca40'
+  accretion_species_id(7) = 'al27'
+  accretion_species_id(8) = 's32'
+  accretion_species_id(9) = 'cr52'
+  accretion_species_id(10) = 'na23'
+  accretion_species_xa(1) = 0.319
+  accretion_species_xa(2) = 0.297
+  accretion_species_xa(3) = 0.161
+  accretion_species_xa(4) = 0.154
+  accretion_species_xa(5) = 0.01822
+  accretion_species_xa(6) = 0.0171
+  accretion_species_xa(7) = 0.0159
+  accretion_species_xa(8) = 0.00635
+  accretion_species_xa(9) = 0.0047
+  accretion_species_xa(10) = 0.0018
+
+  accretion_dump_missing_metals_into_heaviest = .false.
+
+
+  mesh_delta_coeff = 0.75
+
+  min_dq = 1d-21
+
+  max_surface_cell_dq = 1d-21
+
+  show_diffusion_info = .true.
+
+  do_element_diffusion = .true.
+  diffusion_dt_limit = 1d-15
+
+  diffusion_min_dq_at_surface = 1d-17
+  diffusion_min_T_at_surface = 30000
+  diffusion_min_dq_ratio_at_surface = 3
+
+  diffusion_v_max = 0.01
+
+  diffusion_use_full_net = .true.
+
+  use_Type2_opacities = .false.
+
+  max_years_for_timestep = 100
+
+  varcontrol_target = 0.0001
+
+  diffusion_steps_limit = 5
+  diffusion_steps_hard_limit = 50
+
+
+/ ! end of controls namelist
+
+&pgstar
+
+/ ! end of pgstar namelist

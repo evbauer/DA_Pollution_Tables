@@ -1,0 +1,78 @@
+&star_job
+
+
+    load_saved_model = .true.
+    saved_model_name = 'DA_0.6.mod'
+
+    set_tau_factor = .true.  
+    set_to_this_tau_factor = 0.1
+
+    set_initial_dt = .true.
+    ! years_for_initial_dt = 1d-4
+    years_for_initial_dt = 1d2
+
+    change_net = .true.
+    new_net_name = 'pollution.net'
+
+  ! display on-screen plots
+    pgstar_flag = .true.
+    pause_before_terminate = .true.
+
+/ !end of star_job namelist
+
+
+&controls
+
+        history_interval = 1
+        max_abar_for_burning = -1 ! Turn off nuclear burning to avoid having to deal with diffusion induced flashes. 
+
+      mesh_delta_coeff = 0.75
+      varcontrol_target = 1d-4
+      ! varcontrol_target = 3d-4
+
+      ! High surface resolution
+      min_dq = 1d-21
+      max_surface_cell_dq = 1d-21
+
+      use_Type2_opacities = .false.
+
+      ! Chosen to match Koester
+      MLT_option = 'ML2'
+      mixing_length_alpha = 0.8 ! For DAs.
+      ! use_Ledoux_criterion = .true.
+
+      which_atm_option = 'grey_and_kap'
+      ! Switch atm to WD_tau_25_tables for Teff < x_ctrl(10)
+      x_ctrl(10) = 9d3
+
+      Teff_lower_limit = 6000
+      max_model_number = 5000
+
+
+      ! element diffusion
+      do_element_diffusion = .true.
+      diffusion_use_full_net = .true.
+
+      ! Change this to be smaller than the surface convection zone for pollution
+      diffusion_min_dq_at_surface = 1d-16
+      diffusion_min_dq_ratio_at_surface = 3
+      diffusion_min_T_at_surface = 5d3
+
+      show_diffusion_info = .true. ! terminal output for diffusion
+      ! show_diffusion_substep_info = .true. ! terminal output for diffusion
+      ! show_diffusion_timing = .true.
+
+      diffusion_dt_limit = 1d-10 ! in seconds
+      diffusion_v_max = 1d-2
+      diffusion_steps_limit = 50
+      diffusion_steps_hard_limit = 100
+
+      ! diffusion_use_isolve = .true.
+      ! diffusion_rtol_for_isolve = 1d-4
+      ! diffusion_atol_for_isolve = 1d-5
+      ! diffusion_maxsteps_for_isolve = 1000
+      ! diffusion_isolve_solver = 'ros2_solver'
+
+
+
+/ ! end of controls namelist

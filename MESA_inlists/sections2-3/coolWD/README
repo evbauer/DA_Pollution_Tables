@@ -1,0 +1,6 @@
+
+Use MESA version 10398 with this inlist and these models to reproduce
+figures 1 and 4. The provided run_star_extras.f switches between
+atmosphere boundary conditions at 9000 K (set in the inlist). It also
+records the quantities needed for the right panel of figure 4. 
+
