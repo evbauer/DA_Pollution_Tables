@@ -1,0 +1,10 @@
+
+Use MESA version 11191.
+Also requires the ruby tool MesaScript, available at https://github.com/wmwolf/MesaScript
+
+This should be a working MESA work directory. Just compile, and then
+execute the srcipt by running "ruby thermo.rb"
+
+This will reproduce the mass fractions shown by the green line in
+figure 10.
+

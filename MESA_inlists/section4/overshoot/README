@@ -1,0 +1,7 @@
+
+The MESA work directory Brown11K_overshoot shows an example for scripting MESA
+runs for a range of accretion rates on a Teff = 11000K model.
+
+This is essentially the same as the thermohaline case except that
+overshoot mixing is added as well. See also ../thermohaline/README
+

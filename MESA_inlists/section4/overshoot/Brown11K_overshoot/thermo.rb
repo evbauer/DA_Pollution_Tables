@@ -6,8 +6,8 @@ puts log_mdots
 
 # Model to load for this Teff
 loadsave = '../../../sections2-3/make_more_models/DA_11000K.mod'
-# Diffusion timescale for this Teff (from table 2 based on diffusion only calcs)
-logtaudiff = 1.2236
+# Estimate of diffusion timescale accounting for larger overshoot mixed region.
+logtaudiff = 3.0
 # Surface conv mass for this Teff (also from table 2)
 log_surf_cvz_dq = -11.87
 # Parameters for resolving diffusion near the surface
@@ -24,14 +24,10 @@ log_mdots.each do |log_mdot|
   puts logdir
   logfile = "logfile" + logmdot_string + ".txt"
   mdot = 10**log_mdot
-  if(log_mdot > -15) then
-    max_timestep = (10**logtaudiff)/(50.0)
-  else
-    max_timestep = (10**logtaudiff)/10.0
-  end
+  max_timestep = 1.0
 
-  # 100 diffusion timescales
-  maxage = (10**logtaudiff)*100
+  # 10 diffusion (+ovr) timescales, these are longer so we can go shorter here
+  maxage = (10**logtaudiff)*10
   
   Inlist.make_inlist('inlist_accrete') do
   
@@ -81,6 +77,11 @@ log_mdots.each do |log_mdot|
     d_mix_ignore_diffusion 1e15
     max_abar_for_burning -1
 
+    overshoot_f_below_nonburn_shell 1.0
+    overshoot_f0_below_nonburn_shell 0.02
+    D_mix_ov_limit 1e-6
+    limit_overshoot_Hp_using_size_of_convection_zone false
+    
     photo_interval 100
   
     history_interval 10

@@ -1,0 +1,128 @@
+
+&star_job
+  pgstar_flag = .true.
+
+  load_saved_model = .true.
+  saved_model_name = '../../../sections2-3/make_more_models/DA_11000K.mod'
+
+  set_initial_age = .true.
+  initial_age = 0
+  set_initial_model_number = .true.
+  initial_model_number = 0
+  set_initial_dt = .true.
+  years_for_initial_dt = 1d-05
+
+  set_to_this_tau_factor = 0.1
+  set_tau_factor = .true.
+
+  change_net = .true.
+  new_net_name = 'pollution3.net'
+
+/ ! end of star_job namelist
+
+&controls
+  photo_interval = 100
+
+  log_directory = 'LOGS-14.00'
+
+  history_interval = 10
+
+  profile_interval = 1000
+
+  surface_avg_abundance_dq = 6.74481d-13
+
+  max_age = 10000
+
+  mixing_length_alpha = 0.8
+
+  use_Ledoux_criterion = .true.
+
+  thermohaline_coeff = 1
+  thermohaline_option = 'Brown_Garaud_Stellmach_13'
+
+  MLT_option = 'ML2'
+
+  T_mix_limit = 50000
+
+  D_mix_ov_limit = 1d-06
+
+  limit_overshoot_Hp_using_size_of_convection_zone = .false.
+
+  overshoot_f_below_nonburn_shell = 1
+  overshoot_f0_below_nonburn_shell = 0.02
+
+  which_atm_option = 'grey_and_kap'
+
+  mass_change = 1d-14
+
+  accrete_same_as_surface = .false.
+  accrete_given_mass_fractions = .true.
+  num_accretion_species = 10
+  accretion_species_id(1) = 'fe56'
+  accretion_species_id(2) = 'o16'
+  accretion_species_id(3) = 'si28'
+  accretion_species_id(4) = 'mg24'
+  accretion_species_id(5) = 'ni58'
+  accretion_species_id(6) = 'ca40'
+  accretion_species_id(7) = 'al27'
+  accretion_species_id(8) = 's32'
+  accretion_species_id(9) = 'cr52'
+  accretion_species_id(10) = 'na23'
+  accretion_species_xa(1) = 0.319
+  accretion_species_xa(2) = 0.297
+  accretion_species_xa(3) = 0.161
+  accretion_species_xa(4) = 0.154
+  accretion_species_xa(5) = 0.01822
+  accretion_species_xa(6) = 0.0171
+  accretion_species_xa(7) = 0.0159
+  accretion_species_xa(8) = 0.00635
+  accretion_species_xa(9) = 0.0047
+  accretion_species_xa(10) = 0.0018
+
+  accretion_dump_missing_metals_into_heaviest = .false.
+
+  mesh_delta_coeff = 0.75
+
+  min_dq = 1d-21
+
+  max_surface_cell_dq = 1d-21
+
+  max_abar_for_burning = -1
+
+  show_diffusion_info = .true.
+
+  do_element_diffusion = .true.
+  diffusion_dt_limit = 1d-15
+
+  diffusion_min_dq_at_surface = 6.74481d-13
+  diffusion_min_T_at_surface = 30000
+  diffusion_min_dq_ratio_at_surface = 3
+
+  diffusion_v_max = 1
+  D_mix_ignore_diffusion = 1d+15
+
+  diffusion_use_full_net = .true.
+
+  use_eosDT2 = .true.
+
+  tiny_fuzz_for_eos = 1d-12
+
+  use_Type2_opacities = .false.
+
+  use_gold_tolerances = .false.
+
+  max_years_for_timestep = 1
+
+  varcontrol_target = 0.0001
+
+  diffusion_steps_limit = 5
+  diffusion_steps_hard_limit = 50
+
+  x_ctrl(10) = 9300
+
+
+/ ! end of controls namelist
+
+&pgstar
+
+/ ! end of pgstar namelist

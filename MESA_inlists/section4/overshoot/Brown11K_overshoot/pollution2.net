@@ -1,0 +1,13 @@
+      
+         include 'basic.net'
+
+	 add_isos(
+	 na23
+	 al27
+	 si28
+	 s32
+	 ca40
+	 ti48
+	 cr52
+	 fe56
+	 )
