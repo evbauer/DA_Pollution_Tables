@@ -8,7 +8,7 @@ earth composition for 100 diffusion timescales with both diffusion and
 thermohaline mixing occuring in the model.
 
 This should be a working MESA work directory. Just compile, and then
-execute the srcipt by running "ruby thermo.rb"
+execute the srcipt by running "ruby thermo.rb".
 
 This will reproduce the mass fractions shown by the orange line in
 figure 5. If you want to produce the other lines in that figure, use
