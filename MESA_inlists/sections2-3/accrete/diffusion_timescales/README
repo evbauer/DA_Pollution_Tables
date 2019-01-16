@@ -1,0 +1,20 @@
+
+Use MESA version 10398.
+Also requires the ruby tool MesaScript, available at https://github.com/wmwolf/MesaScript
+
+The script loads in the models that you can produce in
+../../make_more_models, and calculates diffusion timescales, which are
+recorded in the history output by routines that you can find in
+run_star_extras.f.
+
+You need to specify which element you want to accrete and track for
+recording diffusion timescales in the places where you find "ISO_HERE"
+in accrete.rb and run_star_extras.f.
+
+Put these files in a MESA work directory, and execture the script by
+running "ruby accrete.rb"
+
+This will repeatedly overwrite inlist_accrete with updated parameters
+for a range of Teff, then call the rn script and save to a new LOGS
+directory.
+

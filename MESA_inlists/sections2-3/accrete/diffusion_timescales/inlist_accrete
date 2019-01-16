@@ -1,0 +1,87 @@
+
+&star_job
+  pgstar_flag = .true.
+
+  load_saved_model = .true.
+  saved_model_name = '../../make_more_models/DA_6000K.mod'
+
+  set_initial_age = .true.
+  initial_age = 0
+  set_initial_model_number = .true.
+  initial_model_number = 0
+  set_initial_dt = .true.
+  years_for_initial_dt = 1d-05
+
+  set_to_this_tau_factor = 0.1
+  set_tau_factor = .true.
+
+  change_net = .true.
+  new_net_name = 'pollution.net'
+
+/ ! end of star_job namelist
+
+&controls
+  photo_interval = 10000
+
+  log_directory = 'LOGS_6000'
+
+  history_interval = 1
+
+  profile_interval = 1000
+
+  surface_avg_abundance_dq = 1d-15
+
+  max_age = 588195
+
+  mixing_length_alpha = 0.8
+
+  MLT_option = 'ML2'
+
+  T_mix_limit = 20000
+
+  which_atm_option = 'grey_and_kap'
+
+  mass_change = 1.586d-19
+
+  accrete_same_as_surface = .false.
+  accrete_given_mass_fractions = .true.
+  num_accretion_species = 1
+  accretion_species_id(1) = 'ISO_HERE'
+  accretion_species_xa(1) = 1
+
+  mesh_delta_coeff = 0.75
+
+  min_dq = 1d-21
+
+  max_surface_cell_dq = 1d-21
+
+  show_diffusion_info = .true.
+
+  do_element_diffusion = .true.
+  diffusion_dt_limit = 1d-15
+
+  diffusion_min_dq_at_surface = 2d-18
+  diffusion_min_T_at_surface = 30000
+  diffusion_min_dq_ratio_at_surface = 3
+
+  diffusion_v_max = 0.01
+
+  diffusion_use_full_net = .true.
+
+  use_Type2_opacities = .false.
+
+  max_years_for_timestep = 980.325
+
+  varcontrol_target = 0.0001
+
+  diffusion_steps_limit = 5
+  diffusion_steps_hard_limit = 50
+
+  x_ctrl(10) = 9000
+
+
+/ ! end of controls namelist
+
+&pgstar
+
+/ ! end of pgstar namelist
