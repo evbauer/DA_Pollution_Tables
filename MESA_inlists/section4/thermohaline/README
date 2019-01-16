@@ -1,0 +1,12 @@
+
+The MESA work directory Brown11K shows an example for scripting MESA
+runs for a range of accretion rates on a Teff = 11000K model.
+
+To script a similar sequence for a different Teff, change these
+parameters at the beginning of thermo.rb: logtaudiff and
+log_surf_cvz_dq. These should be set to values from Table 2 in the
+paper (which can also be found in ../../../diffusion_timescales).
+
+Also, change the assignment of "loadsave" to point to a DA WD model of
+the desired effective temperature.
+

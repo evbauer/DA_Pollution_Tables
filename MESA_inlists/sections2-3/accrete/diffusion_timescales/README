@@ -11,7 +11,7 @@ You need to specify which element you want to accrete and track for
 recording diffusion timescales in the places where you find "ISO_HERE"
 in accrete.rb and run_star_extras.f.
 
-Put these files in a MESA work directory, and execture the script by
+Put these files in a MESA work directory, and execute the script by
 running "ruby accrete.rb"
 
 This will repeatedly overwrite inlist_accrete with updated parameters

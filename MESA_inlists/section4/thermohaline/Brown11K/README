@@ -1,0 +1,17 @@
+
+Use MESA version 11191.
+Also requires the ruby tool MesaScript, available at https://github.com/wmwolf/MesaScript
+
+The script loads in the models that you can produce in
+../../../sections2-3/make_more_models/. These models then accrete bulk
+earth composition for 100 diffusion timescales with both diffusion and
+thermohaline mixing occuring in the model.
+
+This should be a working MESA work directory. Just compile, and then
+execute the srcipt by running "ruby thermo.rb"
+
+This will reproduce the mass fractions shown by the orange line in
+figure 5. If you want to produce the other lines in that figure, use
+the same setup, but change the thermohaline_option to 'Kippenhahn' in
+thermo.rb, and adjust thermohaline_coeff as well.
+

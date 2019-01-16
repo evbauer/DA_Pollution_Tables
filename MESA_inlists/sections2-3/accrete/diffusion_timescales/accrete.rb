@@ -83,7 +83,8 @@ teffs.each do |teff|
         # Note that this doesn't actually matter for diffusion timescales or evolution,
         # it just applies to reported surface abundances.
         surface_avg_abundance_dq 1e-15 # A little deeper than the photosphere.
-  
+
+        max_abar_for_burning -1
   
         history_interval 1
         profile_interval 1000
